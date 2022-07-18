@@ -1,0 +1,15 @@
+
+
+powerTerm:
+    ADDTN powerTerm |
+    INTEGER |
+    PAREN expr PAREN
+
+factor:
+    powerTerm ( POW powerTerm )*
+
+term:
+    factor ( MULTPL factor )*
+
+expr:
+    term ( ADDTN term )*
